@@ -1,12 +1,14 @@
 <?php
 namespace modul;
 
-use models\UserDataBase;
+use models\UsersModel;
 
-trait Auth {
-    public function rule() {
+trait Auth 
+{
+    public function rule(): void
+    {
         $token = $_COOKIE['remember_token'] ?? null;
-        $user = new UserDataBase();
+        $user = new UsersModel();
         $res = $user->all()->where('remember_token', '=', $token)->get();
         if($res == null){
             header("Location: /auth/login");

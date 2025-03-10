@@ -6,9 +6,9 @@ class View
 {
     public $title = 'Page';
 
-    public function view(string $page, string $layout, array $data=[])
+    public function view(string $page, string $layout, array $data=[]): void
     {
         extract($data);
-        include './layouts/' . $layout;
+        include './views/layouts/' . $layout;
     }
 }

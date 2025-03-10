@@ -12,7 +12,7 @@ class DB
 
     public function __construct()
     {
-        $this->connectionData = ENV::getConnection();
+        $this->connectionData = ENV::getConnectionData();
         $this->connection = new PDO("mysql:host={$this->connectionData['HOST']};dbname={$this->connectionData['DBNAME']}", $this->connectionData['USER'], $this->connectionData['PASSWORD']);
     }
     

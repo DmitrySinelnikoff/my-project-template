@@ -8,20 +8,24 @@ function checkPost(): void
     }
 }
 
-function addOldValue() {
+function addOldValue(): void
+{
     foreach($_POST as $key => $item) {
         $_SESSION[$key] = $item;
     }
 }
 
-function getOldValue(string $name) {
+function getOldValue(string $name): void
+{
     echo $_SESSION[$name] ?? null;
 }
 
-function setError(string $errrorMessage) {
+function setError(string $errrorMessage): void
+{
     $_SESSION['error'] = $errrorMessage;
 }
 
-function getError() {
+function getError(): mixed
+{
     return $_SESSION['error'] ?? null;
 }

@@ -14,5 +14,5 @@ abstract class Controller
         $this->view = new View();
     }
 
-    public function rule() {}
+    public function rule(): void {}
 }

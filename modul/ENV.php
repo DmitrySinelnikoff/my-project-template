@@ -4,7 +4,7 @@ namespace modul;
 
 class ENV
 {
-    public static function getConnection()
+    public static function getConnectionData()
     {
         $env = parse_ini_file(__DIR__ . '//..//.env');
         return [
